@@ -1,0 +1,51 @@
+[package]
+name = "crab_sweeper"
+version = "0.1.0"
+authors = ["SethRAH <srahare@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+#profiling = ["cpuprofiler"]
+
+
+[dependencies.ggez]
+version = "0.5.1"
+#features = ["cargo-resource-root"]
+
+[dependencies]
+bitflags = "1"
+zip = { version = "0.5", default-features = false }
+directories = "3"
+gfx = "0.18"
+gfx_core = "0.9"
+gfx_device_gl = "0.16"
+glyph_brush = "0.7"
+old_school_gfx_glutin_ext = "0.26"
+glutin = "0.26"
+winit = "0.24"
+image = {version = "0.23", default-features = false, features = ["gif", "png", "pnm", "tga", "tiff", "webp", "bmp", "dxt", ] }
+rodio = { version = "0.13", default-features = false, features = ["flac", "vorbis", "wav"] }
+serde = "1"
+serde_derive = "1"
+toml = "0.5"
+log = "0.4"
+lyon = "0.16"
+smart-default = "0.6"
+glam = { version = "0.12", features = ["mint"]}
+# Has to be the same version of mint that our math lib uses here.
+mint = "0.5"
+gilrs = "0.8"
+approx = "0.4"
+chrono = "0.4"
+fern = "0.6"
+oorandom = "11"
+argh = "0.1"
+
+skeptic = "0.13"
+getrandom = "0.2"
+
+[build-dependencies]
+skeptic = "0.13"
